@@ -3,7 +3,7 @@
 
 import random
 
-def greet_user(name):
+def greet_user(name)
     return f"Hello, {name}! Welcome to the program."
 
 def generate_numbers(count):
