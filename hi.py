@@ -1,7 +1,7 @@
 # Simple 30-line Python script
 # This script collects user input, processes data, and prints results
 
-import random
+import rando
 
 def greet_user(name):
     return f"Hello, {name}! Welcome to the program."
