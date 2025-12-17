@@ -20,7 +20,7 @@ user_name = "Vedha"
 print(greet_user(user_name))
 
 nums = generate_numbers(5)
-print("Generated numbers:", nums)
+print("Generated numbers:", num
 
 avg = find_average(nums)
 print("Average:", avg)
@@ -29,3 +29,4 @@ maximum = find_max(nums)
 print("Maximum:", maximum)
 
 print("Processing complete!")
+print("processing incomplete")
