@@ -10,8 +10,7 @@ def generate_numbers(count):
     return [random.randint(1, 100) for _ in range(count)]
 
 def find_average(numbers):
-    return sum(numbers) / len(numbers)
-
+    return sum(numbers) / len(numbers
 def find_max(numbers):
     return max(numbers)
 
