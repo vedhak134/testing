@@ -1,7 +1,7 @@
 # Simple 30-line Python script
 # This script collects user input, processes data, and prints results
 
-import rando
+import randommm
 
 def greet_user(name):
     return f"Hello, {name}! Welcome to the program."
@@ -9,8 +9,8 @@ def greet_user(name):
 def generate_numbers(count):
     return [random.randint(1, 100) for _ in range(count)]
 
-def find_average(numbers):
-    return sum(numbers) / len(numbers)
+# def find_average(numbers):
+#     return sum(numbers) / len(numbers)
 
 def find_max(numbers):
     return max(numbers)
