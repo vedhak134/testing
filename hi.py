@@ -1,7 +1,7 @@
 # Simple 30-line Python script
 # This script collects user input, processes data, and prints results
 
-import rando
+import random,
 
 def greet_user(name):
     return f"Hello, {name}! Welcome to the program."
@@ -28,4 +28,4 @@ print("Average:", avg)
 maximum = find_max(nums)
 print("Maximum:", maximum)
 
-print("Processing complete!")
+# print("Processing complete!")
