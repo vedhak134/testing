@@ -4,7 +4,7 @@
 import rando
 
 def greet_user(name):
-    return f"Hello, {name}! Welcome to the program."
+    return f"Hello, {name}! Welcome to the program
 
 def generate_numbers(count):
     return [random.randint(1, 100) for _ in range(count)]
@@ -25,7 +25,7 @@ print("Generated numbers:", nums)
 avg = find_average(nums)
 print("Average:", avg)
 
-maximum = find_max(nums)
-print("Maximum:", maximum)
+# maximum = find_max(nums)
+# print("Maximum:", maximum)
 
 print("Processing complete!")
