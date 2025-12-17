@@ -3,7 +3,7 @@
 
 import rando
 
-def greet_user(name):
+# def greet_user(name):
     return f"Hello, {name}! Welcome to the program."
 
 def generate_numbers(count):
@@ -29,3 +29,4 @@ maximum = find_max(nums)
 print("Maximum:", maximum)
 
 print("Processing complete!")
+print("go through")
