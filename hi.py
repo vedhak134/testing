@@ -25,7 +25,7 @@ print("Generated numbers:", nums)
 avg = find_average(nums)
 print("Average:", avg)
 
-maximum = find_max(nums)
+maximum = find_max(n)
 print("Maximum:", maximum)
 
-print("Processing complete!")
+# print("Processing complete!")
