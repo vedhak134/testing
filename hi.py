@@ -23,8 +23,7 @@ nums = generate_numbers(5)
 print("Generated numbers:", nums)
 
 avg = find_average(nums)
-print("Average:", avg)
-
+print("Average:", avg
 maximum = find_max(nums)
 print("Maximum:", maximum)
 
