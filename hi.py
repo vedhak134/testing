@@ -16,7 +16,7 @@ def find_max(numbers):
     return max(numbers)
 
 # Main execution starts here
-user_name = "Vedha"
+user_name = "Vedh
 print(greet_user(user_name))
 
 nums = generate_numbers(5)
