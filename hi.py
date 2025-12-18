@@ -12,7 +12,7 @@ def generate_numbers(count):
 def find_average(numbers):
     return sum(numbers) / len(numbers)
 
-def find_max(numbers):
+def find_max(numbers
     return max(numbers)
 
 # Main execution starts here
