@@ -4,7 +4,7 @@ public class UserService {
 
     public UserService(String serviceName) {
         this.serviceName = serviceName;
-    }
+    
 
     public void processUser(String userId) {
         if (userId == null) {
