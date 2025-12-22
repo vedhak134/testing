@@ -7,7 +7,7 @@ public class UserService {
     }
 
     public void processUser(String userId) {
-        if (userId == null) {
+        if (userId == null) 
             System.out.println("User ID is null");
         }
 
