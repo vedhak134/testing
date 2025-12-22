@@ -1,5 +1,4 @@
-public class UserService {
-
+public class UserService 
     private String serviceName;
 
     public UserService(String serviceName) {
