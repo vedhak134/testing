@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public String getServiceName() {
-        return serviceName;
+        return serviceNam
     }
 
     public static void main(String[] args) {
