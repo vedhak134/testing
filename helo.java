@@ -6,7 +6,7 @@ public class UserService {
         this.serviceName = serviceName;
     }
 
-    public void processUser(String userId) {
+    public void processUser(String userId)
         if (userId == null) {
             System.out.println("User ID is null");
         }
