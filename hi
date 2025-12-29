@@ -1,0 +1,85 @@
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+/* Validation Schema */
+const RegisterSchema = Yup.object({
+  username: Yup.string()
+    .min(3, "Minimum 3 characters")
+    .required("Username is required"),
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  password: Yup.string()
+    .min(6, "Minimum 6 characters")
+    .required("Password is required"),
+});
+
+/* Submit Handler */
+const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+  try {
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+    const response = await fetch(`${apiUrl}/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
+
+    if (!response.ok) {
+      throw new Error("Registration failed");
+    }
+
+    const data = await response.json();
+    alert(`User ${data.username} registered successfully`);
+    resetForm();
+  } catch (error) {
+    alert(error.message);
+  } finally {
+    setSubmitting(false);
+  }
+};
+
+const RegisterForm = () => {
+  return (
+    <div style={{ maxWidth: "400px", margin: "0 auto" }}>
+      <h2>Register</h2>
+
+      <Formik
+        initialValues={{ username: "", email: "", password: "" }}
+        validationSchema={RegisterSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <div style={{ marginBottom: "1rem" }}>
+              <label>Username</label>
+              <Field type="text" name="username" />
+              <ErrorMessage name="username" component="div" style={{ color: "red" }} />
+            </div>
+
+            <div style={{ marginBottom: "1rem" }}>
+              <label>Email</label>
+              <Field type="email" name="email" />
+              <ErrorMessage name="email" component="div" style={{ color: "red" }} />
+            </div>
+
+            <div style={{ marginBottom: "1rem" }}>
+              <label>Password</label>
+              <Field type="password" name="password" />
+              <ErrorMessage name="password" component="div" style={{ color: "red" }} />
+            </div>
+
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Registering..." : "Register"}
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+};
+
+export default RegisterForm;
+
+ 
